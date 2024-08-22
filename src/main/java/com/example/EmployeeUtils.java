@@ -6,7 +6,9 @@ import java.util.function.Predicate;
 public class EmployeeUtils {
 
   public String getFullName(Employee employee) {
-    Function<Employee, String> fullName = null;
+    Function<Employee, String> fullName = (Employee e) -> {
+      return e.getFirstName() + " " + e.getLastName();
+    };
     return fullName.apply(employee);
   }
 
